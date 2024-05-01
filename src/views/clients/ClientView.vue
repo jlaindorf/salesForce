@@ -9,21 +9,30 @@
     <table class="menu">
         <thead>
             <tr>
-                <th colspan="4" class="title-table">CLIENTES</th>
+                <th colspan="6" class="title-table">CLIENTES</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th>NOME</th>
+                <th>CPF</th>
                 <th>EMAIL</th>
                 <th>CONTATO</th>
                 <th>ENDEREÇO</th>
+                <th>AÇÕES</th>
             </tr>
             <tr v-for="(client, index) in clients" :key="client.id">
                 <td>{{ client.name }}</td>
+                <td>{{ client.cpf }}</td>
                 <td>{{ client.email }}</td>
                 <td>{{ client.contact }}</td>
-                <td>{{ client.city }}/{{ client.state }}-{{ client.street }},{{ client.number }} ,CEP:{{ client.cep }}
+                <td>{{ client.city }}/{{ client.state }}-
+                    {{ client.street }},{{ client.number }}
+                    ,CEP:{{ client.cep }}
+                </td>
+                <td>
+                    <button class="actions" type="submit">editar</button>
+                    <button class="actions" type="submit">apagar</button>
                 </td>
             </tr>
         </tbody>
@@ -75,5 +84,10 @@ td:hover {
     background-color: rgb(205, 207, 219);
     padding: 10px;
 
+}
+
+.actions {
+    width: 50%;
+    margin: 2px;
 }
 </style>

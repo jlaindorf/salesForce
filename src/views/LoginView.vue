@@ -7,7 +7,7 @@
       <input v-model="email" type="text" placeholder="Digite o email">
       <input v-model="password" type="password" placeholder="Digite a senha">
       
-      <button type="submit">Logar</button>
+      <button class="button" type="submit">Logar</button>
     </form>
   </div>
 </template>
@@ -61,5 +61,16 @@ export default {
 input {
   width: 60%;
   height: 30px;
+}
+button{
+
+  width: 80%;
+    padding: 10px;
+    background-color:  #0056b3;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    
 }
 </style>
