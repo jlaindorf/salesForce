@@ -16,14 +16,18 @@
                 <div>
                     <label for="client">Cliente:</label>
                     <select class="input" id="client" v-model="selectedClient">
-                        <option v-for="client in clients" :key="client.id" :value="client.id">{{ client.name }}</option>
+                        <option v-for="client in clients" 
+                        :key="client.id" 
+                        :value="client.id">{{ client.name }}</option>
                     </select>
                 </div>
 
                 <div>
                     <label for="product">Produto:</label>
                     <select class="input" id="product" v-model="selectedProduct">
-                        <option v-for="product in products" :key="product.id" :value="product.id">{{ product.name }}
+                        <option v-for="product in products" 
+                        :key="product.id" 
+                        :value="product.id">{{ product.name }}
                         </option>
                     </select>
                 </div>
@@ -36,7 +40,9 @@
                 <div>
                     <label for="payment">Forma de Pagamento:</label>
                     <select id="payment" v-model="selectedPayment">
-                        <option v-for="payment in payments" :key="payment.id" :value="payment.id">{{ payment.name }}
+                        <option v-for="payment in payments" 
+                        :key="payment.id" 
+                        :value="payment.id">{{ payment.name }} {{ payment.installments}}x
                         </option>
                     </select>
                 </div>
