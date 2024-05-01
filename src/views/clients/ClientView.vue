@@ -21,10 +21,26 @@
                 <td>{{ client.cpf }}</td>
                 <td>{{ client.email }}</td>
                 <td>{{ client.contact }}</td>
-                <td>{{ client.city }}/{{ client.state }}-{{ client.street }}, {{ client.number }}, CEP:{{ client.cep }}</td>
+                <td>{{ client.city }}/
+                    {{ client.state }}-
+                    {{ client.street }},
+                    {{ client.neighborhood }},
+                    {{ client.number }},
+                    CEP:{{ client.cep }}</td>
                 <td>
-                    <button class="actions" type="button" @click="editClient(client.id)">editar</button>
-                    <button class="actions" type="button" @click="deleteClient(client.id)">apagar</button>
+                    <button 
+                    class="actions" 
+                    type="button" 
+                    @click="editClient(client.id)"
+                    >
+                    editar
+                    </button>
+                    <button 
+                    class="actions" 
+                    type="button" 
+                    @click="deleteClient(client.id)"
+                    >apagar
+                    </button>
                 </td>
             </tr>
         </tbody>
